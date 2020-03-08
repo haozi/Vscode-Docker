@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ICommandHandler = Symbol('ICommandHandler');
+exports.IGitHistoryCommandHandler = Symbol('IGitHistoryCommandHandler');
+exports.IGitFileHistoryCommandHandler = Symbol('IGitFileHistoryCommandHandler');
+exports.IGitCommitViewExplorerCommandHandler = Symbol('IGitCommitViewExplorerCommandHandler');
+exports.IFileCommandHandler = Symbol('IFileCommandHandler');
+exports.IGitCompareCommitViewExplorerCommandHandler = Symbol('IGitCompareCommitViewExplorerCommandHandler');
+exports.IGitCommitCommandHandler = Symbol('IGitCommitCommandHandler');
+exports.IGitRefCommandHandler = Symbol('IGitRefCommandHandler');
+exports.IGitCommitViewDetailsCommandHandler = Symbol('IGitCommitViewDetailsCommandHandler');
+exports.IGitCherryPickCommandHandler = Symbol('IGitCherryPickCommandHandler');
+exports.IGitCheckoutCommandHandler = Symbol('IGitCheckoutCommandHandler');
+exports.IGitMergeCommandHandler = Symbol('IGitMergeCommandHandler');
+exports.IGitRebaseCommandHandler = Symbol('IGitRebaseCommandHandler');
+exports.IGitRevertCommandHandler = Symbol('IGitRevertCommandHandler');
+exports.IGitCompareCommandHandler = Symbol('IGitCompareCommandHandler');
+exports.IGitCompareFileCommandHandler = Symbol('IGitCompareFileCommandHandler');
+exports.ICommandHandlerManager = Symbol('ICommandHandlerManager');
+//# sourceMappingURL=types.js.map

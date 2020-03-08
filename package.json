@@ -1,0 +1,14 @@
+{
+  "name": "docker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sh build.sh",
+    "deploy": "sh deploy.sh",
+    "start": "sh start.sh"
+  }
+}

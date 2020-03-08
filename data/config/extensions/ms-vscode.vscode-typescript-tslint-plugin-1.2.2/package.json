@@ -1,0 +1,174 @@
+{
+	"name": "vscode-typescript-tslint-plugin",
+	"version": "1.2.2",
+	"private": true,
+	"displayName": "TSLint",
+	"description": "TSLint support for Visual Studio Code",
+	"publisher": "ms-vscode",
+	"icon": "docs/icon.png",
+	"license": "MIT",
+	"galleryBanner": {
+		"color": "#fcfcfc",
+		"theme": "light"
+	},
+	"repository": {
+		"url": "https://github.com/Microsoft/vscode-typescript-tslint-plugin.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Microsoft/vscode-typescript-tslint-plugin/issues"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"tslint",
+		"typescript",
+		"lint",
+		"ts",
+		"linters"
+	],
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"activationEvents": [
+		"onLanguage:javascript",
+		"onLanguage:javascriptreact",
+		"onLanguage:typescript",
+		"onLanguage:typescriptreact"
+	],
+	"main": "./out/index.js",
+	"contributes": {
+		"jsonValidation": [
+			{
+				"fileMatch": "tslint.json",
+				"url": "http://json.schemastore.org/tslint"
+			},
+			{
+				"fileMatch": "jsconfig*.json",
+				"url": "./schemas/tsconfig.schema.json"
+			},
+			{
+				"fileMatch": "tsconfig*.json",
+				"url": "./schemas/tsconfig.schema.json"
+			}
+		],
+		"problemPatterns": [
+			{
+				"name": "tslint4",
+				"regexp": "^(\\(\\S*\\)\\s+)?(\\S.*)\\[(\\d+), (\\d+)\\]:\\s+(.*)$",
+				"file": 2,
+				"line": 3,
+				"column": 4,
+				"message": 5
+			},
+			{
+				"name": "tslint5",
+				"regexp": "^(WARNING|ERROR):(\\s+\\(\\S*\\))?\\s+(\\S.*)(:|\\[)(\\d+)(:|, )(\\d+)(\\]:\\s+|\\s+-\\s+)(.*)$",
+				"severity": 1,
+				"file": 3,
+				"line": 5,
+				"column": 7,
+				"message": 9
+			}
+		],
+		"problemMatchers": [
+			{
+				"name": "tslint4",
+				"label": "tslint (version 4) warnings",
+				"owner": "tslint",
+				"source": "tslint",
+				"applyTo": "closedDocuments",
+				"fileLocation": "absolute",
+				"severity": "warning",
+				"pattern": "$tslint4"
+			},
+			{
+				"name": "tslint5",
+				"owner": "tslint",
+				"source": "tslint",
+				"label": "tslint (version 5) warnings",
+				"applyTo": "closedDocuments",
+				"fileLocation": "absolute",
+				"severity": "warning",
+				"pattern": "$tslint5"
+			}
+		],
+		"typescriptServerPlugins": [
+			{
+				"name": "typescript-tslint-plugin",
+				"enableForWorkspaceTypeScriptVersions": true
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "TSLint",
+			"properties": {
+				"tslint.jsEnable": {
+					"type": "boolean",
+					"description": "Control whether tslint is enabled for JavaScript files or not."
+				},
+				"tslint.configFile": {
+					"type": "string",
+					"description": "The path to the rules configuration file"
+				},
+				"tslint.ignoreDefinitionFiles": {
+					"type": "boolean",
+					"description": "Control if TypeScript definition files should be ignored."
+				},
+				"tslint.exclude": {
+					"description": "A glob or an array of globs. Any file matching these globs will not be linted.",
+					"anyOf": [
+						{
+							"type": "string"
+						},
+						{
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					]
+				},
+				"tslint.alwaysShowRuleFailuresAsWarnings": {
+					"type": "boolean",
+					"description": "Always show rule failures as warnings, independent of the tslint configuration.",
+					"default": true
+				},
+				"tslint.suppressWhileTypeErrorsPresent": {
+					"type": "boolean",
+					"description": "Always show rule failures as warnings, independent of the tslint configuration."
+				},
+				"tslint.packageManager": {
+					"type": "string",
+					"enum": [
+						"npm",
+						"pnpm",
+						"yarn"
+					],
+					"default": "npm",
+					"description": "The package manager you use to install node modules."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -w -p ./",
+		"lint": "tslint -c tslint.json -p ."
+	},
+	"dependencies": {
+		"typescript-tslint-plugin": "0.5.4"
+	},
+	"devDependencies": {
+		"tslint": "^5.17.0",
+		"typescript": "^3.8.2",
+		"vsce": "^1.73.0",
+		"vscode": "^1.1.36"
+	},
+	"__metadata": {
+		"id": "ms-vscode.vscode-typescript-tslint-plugin",
+		"publisherId": "ms-vscode",
+		"publisherDisplayName": "ms-vscode"
+	}
+}
