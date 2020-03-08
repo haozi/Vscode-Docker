@@ -1,0 +1,17 @@
+{
+  "debug.console.fontSize": 14,
+  "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace, CSS Mono",
+  "editor.fontSize": 14,
+  "editor.renderWhitespace": "selection",
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none"
+}

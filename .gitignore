@@ -1,0 +1,11 @@
+data/config/logs
+data/config/logs
+data/config/User/state
+data/config/User/snippets
+data/config/User/Backups
+data/config/User/workspaceStorage
+data/config/coder.json
+data/config/languagepacks.json
+data/config/heartbeat
+data/config/machineid
+data/config/conf/extensions
