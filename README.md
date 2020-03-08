@@ -8,10 +8,7 @@
 docker run -it --rm -p 8080:8080 -v $PWD:/workspace haozhi/vscode
 ```
 
-
-## 安装
-
-1. 更新最新版 vscode 到 /data/vscode
+![snapshot](data/snapshot.png)
 
 ### 开发
 
