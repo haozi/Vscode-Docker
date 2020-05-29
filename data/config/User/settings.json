@@ -12,6 +12,6 @@
   "terminal.integrated.shell.linux": "/bin/zsh",
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "Monokai Dimmed",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none"
 }
